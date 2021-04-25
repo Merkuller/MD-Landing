@@ -803,7 +803,7 @@ nav .wrapper .btn.cancel-btn {
 
 .works-cards__card {
   position: relative;
-  height: 470px;
+  height: calc(280px + (470 - 280) * ((100vw - 320px) / (1920 - 320)));
   max-width: 580px;
   margin: 2%;
   display: block;
@@ -835,7 +835,7 @@ nav .wrapper .btn.cancel-btn {
 
 .works-cards__image {
   background: black;
-  height: 400px;
+  height: calc(210px + (400 - 210) * ((100vw - 320px) / (1920 - 320)));
   overflow: hidden;
 }
 
