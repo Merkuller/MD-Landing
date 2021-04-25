@@ -1,0 +1,1073 @@
+/* Шрифты */
+
+/* Основные стили */
+
+// :root 
+//   --gradient-color: linear-gradient(to right bottom, rgba(255, 199, 48, .8), rgba(255, 185, 0, .8))
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+*
+  box-sizing: inherit
+
+  &::before, &::after
+    box-sizing: inherit
+
+body
+  max-width: 1920px
+  margin: 0px auto
+  font-family: 'Montserrat', sans-serif
+  font-style: normal
+  font-size: 16px
+  line-height: 1.2
+  font-weight: normal
+  color: #010101
+  overflow: hidden
+
+/* Центратор
+
+.wrapper
+  max-width: 1400px
+  margin: 0px auto
+  padding: 0 15px
+  @media screen and ( max-width: 1200px)
+    max-width: 970px
+  @media screen and ( max-width: 992px)
+    max-width: 750px
+  @media screen and ( max-width: 767px)
+    max-width: none
+
+nav
+  background: #242526
+  position: fixed
+  width: 100%
+  z-index: 999
+  height: 65px
+  line-height: 65px
+  .wrapper
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    #menu-btn
+      display: none
+    #cancel-btn
+      display: none
+    #menu-btn:checked ~ .nav-links
+      left: 0%
+    #menu-btn:checked ~ .btn.menu-btn
+      display: none
+    .btn
+      color: #fff
+      font-size: 20px 
+      cursor: pointer
+      display: none
+      @media screen and (max-width: 994px)
+        display: block
+      &.cancel-btn
+        position: absolute
+        right: 30px
+        top: 10px
+     
+
+.logo
+  display: flex
+  position: relative
+  height: 50px
+  &::after
+    content: 'Комплексная автоматизация бизнеса'
+    width: 300px
+    font-size: 18px
+    line-height: 25px
+    white-space: wrap
+    color: #f2f2f2
+    position: absolute
+    right: -320px
+    top: 1px
+    @media screen and ( max-width: 1240px)
+      display: none
+  &::before
+    content: ''
+    width: 2px
+    height: 50px
+    background: #4DCF1D
+    position: absolute
+    right: -10px
+    border-radius: 4px
+    @media screen and ( max-width: 1240px)
+      display: none
+  a
+    color: #f2f2f2
+    text-decoration: none
+    font-size: 27px
+    font-weight: 600
+    width: 200px
+    height: 50px
+    position: relative
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: fill
+      position: absolute
+      left: 0px
+  span
+    color: #f2f2f2
+.nav-links
+  display: inline-flex
+  @media screen and (max-width: 994px)
+    position: fixed
+    height: 100vh
+    width: 100%
+    max-width: 350px
+    background: #242526
+    display: block
+    top: 0
+    left: -100%
+    overflow-y: auto
+    line-height: 50px
+    padding: 50px 10px
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15)
+    transition: all .3s ease
+    &::-webkit-scrollbar
+      width: 0px
+  li
+    list-style: none
+    @media screen and (max-width: 994px)
+      margin: 15px 10px
+    &:hover
+      .drop-menu, .mega-box
+        opacity: 1
+        visibility: visible
+        top: 65px
+        transition: all .3s ease
+    a
+      color: #fff
+      text-decoration: none
+      font-size: 18px
+      font-weight: 500
+      padding: 9px 15px
+      border-radius: 5px
+      transition: all .3s ease
+      @media screen and (max-width: 994px)
+        padding: 0px 20px
+        display: block
+        font-size: 20px
+      &:hover
+        background: #3A3B3C
+    .desktop-item
+      @media screen and (max-width: 994px)
+        display: none
+    #showDrop
+      display: none
+    #showMega
+      display: none
+    #showDrop:checked ~ .drop-menu,
+    #showMega:checked ~ .mega-box
+      @media screen and (max-width: 994px)
+        max-height: 100%
+    .mobile-item
+      display: none
+      @media screen and (max-width: 994px)
+        display: block
+        font-size: 20px
+        color: #f2f2f2
+        font-weight: 500
+        padding-left: 20px
+        cursor: pointer
+        border-radius: 5px
+        transition: all .3s ease
+        &:hover
+          background: #3A3B3C
+    .drop-menu
+      background: #242526
+      width: 180px
+      top: 85px
+      line-height: 45px
+      position: absolute
+      opacity: 0
+      visibility: hidden
+      @media screen and (max-width: 994px)
+        position: static
+        opacity: 1
+        visibility: visible
+        top: 65px
+        padding-left: 20px 
+        width: 100%
+        max-height: 0px
+        overflow: hidden
+        transition: all .3s ease
+      li
+        @media screen and (max-width: 994px)
+          margin: 0
+        a
+          width: 100%
+          display: block
+          padding: 0 0 0 15px
+          font-weight: 400
+          border-radius: 0px
+          @media screen and (max-width: 994px)
+            font-size: 18px
+            border-radius: 5px
+      
+.mega-box
+  position: absolute
+  top: 85px
+  width: 100%
+  left: 0px
+  padding: 0 30px
+  opacity: 0
+  visibility: hidden
+  @media screen and (max-width: 994px)
+    position: static
+    top: 65px
+    opacity: 1
+    visibility: visible
+    padding: 0 20px
+    max-height: 0px
+    overflow: hidden
+    transition: all .3s ease
+
+  .content
+    background: #242526
+    padding: 25px 20px 
+    display: flex
+    width: 100%
+    justify-content: space-between
+    @media screen and (max-width: 994px)
+      flex-direction: column
+      padding: 20px 20px 0 20px
+    .row
+      width: calc(25% - 30px)
+      line-height: 45px
+      @media screen and (max-width: 994px)
+        width: 100%
+        margin-bottom: 15px
+        border-top: 1px solid rgba(255, 255, 255, 0.08)
+      &:nth-child(1)
+        border-left: 0px
+        @media screen and (max-width: 994px)
+          border-top: 0px
+      &:nth-child(2)
+        border-left: 0px
+        @media screen and (max-width: 994px)
+          border-top: 0px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      header
+        font-size: 20px 
+        font-weight: 500
+        color: #f2f2f2
+        @media screen and (max-width: 994px)
+          font-size: 19px
+      .mega-links
+        margin-left: -40px
+        border-left: 1px solid rgba(255, 255, 255, 0.09)
+        @media screen and (max-width: 994px)
+          border-left: 0px 
+          padding-left: 15px
+        li
+          padding: 0 20px
+          @media screen and (max-width: 994px)
+            margin: 0
+          a
+            padding: 0 20px
+            color: #d9d9d9
+            font-size: 17px
+            display: block
+            &:hover
+              color: #f2f2f2
+
+/* Основной контент */
+.parallax
+  position: relative
+  .parallax-window 
+    margin-top: 60px
+    min-height: calc(250px + (500 - 250) * ((100vw - 320px) / (1200 - 320)))
+    background: transparent
+  .parallax__btn
+    position: absolute
+    top: 75%
+    left: 50%
+    transform: translateX(-50%)
+    a
+      display: block
+      white-space: nowrap
+      border-radius: 5px
+      position: relative
+      background: none
+      transition: .5s linear
+      transition-delay: 0s
+      color: #1e272e
+      overflow: hidden
+      padding: 15px 30px
+      font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1200 - 320)))
+      font-weight: bold
+      letter-spacing: 1px
+      text-transform: uppercase
+      text-decoration: none
+      &:hover
+        background: #1e272e
+        color: #f2f2f2
+        transition: .5s linear
+        transition-delay: 1s
+        span:nth-child(1)
+          left: 100%
+          transition: 1s
+        span:nth-child(2)
+          top: 100%
+          transition: 1s
+          transition-delay: 0.25s
+        span:nth-child(3)
+          right: 100%
+          transition: 1s
+          transition-delay: 0.5s
+        span:nth-child(4)
+          top: -100%
+          transition: 1s
+          transition-delay: 0.75s
+      span
+        display: block
+        position: absolute
+        &:nth-child(1)
+          top: 0
+          left: -100%
+          height: 2px
+          width: 100%
+          background: linear-gradient(90deg, transparent, #1e272e)
+          transition: 0.5s
+          transition-delay: 1s
+        &:nth-child(2)
+          top: -100%
+          right: 0
+          height: 100%
+          width: 2px
+          background: linear-gradient(180deg, transparent, #1e272e)
+          transition: 0.5s
+          transition-delay: 0.75s
+        &:nth-child(3)
+          bottom: 0
+          right: -100%
+          height: 2px
+          width: 100%
+          background: linear-gradient(270deg, transparent, #1e272e)
+          transition: 0.7s
+          transition-delay: 0.25s
+        &:nth-child(4)
+          top: 100%
+          left: 0
+          height: 100%
+          width: 2px
+          background: linear-gradient(360deg, transparent, #1e272e)
+          transition: 0.5s
+          transition-delay: 0s
+          
+/* Секция с преимуществами */
+
+.benefits
+  padding: 40px 0
+  background-color: #1e272e
+  .wrapper
+    display: flex
+    @media screen and (max-width: 992px)
+      flex-direction: column
+  &__text
+    flex: 1 1 50%
+    @media screen and (max-width: 992px)
+      margin-bottom: 10px
+  &__headline
+    font-weight: 700
+    font-size: calc(38px + (48 - 38) * ((100vw - 320px) / (1200 - 320)))
+    width: 100%
+    color: #f2f2f2
+    margin-bottom: 10px
+    @media screen and (max-width: 425px)
+      text-align: center
+  &__explanation
+    width: 100%
+    color: #FFFFFF
+  &__features
+    flex: 1 1 50%
+    display: flex
+    flex-wrap: wrap
+  &__feature
+    flex: 1 1 30%
+    margin: 4%
+    color: #f2f2f2
+    padding: 15px
+    background: crimson
+    &:last-of-type
+      @media screen and (max-width: 530px)
+        margin-bottom: 20px
+    @media screen and (max-width: 530px)
+      flex-basis: 100%
+      margin: 2% 0
+  &__title
+    font-size: 25px
+    text-align: center
+    color: #f2f2f2
+    margin-bottom: 10px
+  &__description
+    color: #f2f2f2
+
+
+/* Секция с нашими работами */
+
+.works
+  padding: 40px 0
+  background-color: snow
+		&__title
+      font-weight: 700
+      font-size: calc(38px + (48 - 38) * ((100vw - 320px) / (1200 - 320)))
+      text-align: center
+      @media screen and ( max-width: 425px)
+        margin-bottom: 20px
+		&__content
+      display: flex
+      flex-wrap: wrap
+		&__watchMore
+      display: block
+      position: relative
+      margin: 0px auto
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 55px
+      width: 180px
+      font-size: 18px
+      color: crimson
+      border: 1px solid crimson
+      border-radius: 4px
+      text-decoration: none
+      line-height: 55px
+      @media screen and ( max-width: 425px)
+        margin-top: 20px
+      &:hover
+        span
+          color: #f2f2f2
+        &:before, &:after
+          height: 50%
+          opacity: 1
+      span
+        display: block
+        z-index: 2
+        color: crimson
+        transition: .5s linear
+      &:before, &:after
+        position: absolute
+        content: ''
+        z-index: 1
+        left: 0px
+        height: 0px
+        width: 100%
+        background: crimson
+        opacity: 0
+        transition: all .5s
+      &:before
+        top: 50%
+      &:after
+        bottom: 50%
+
+
+.works-cards
+  &__card
+    position: relative
+    height: 470px
+    flex: 1 1 40%
+    margin: 2%
+    display: block
+    background: Honeydew
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15)
+    transition: .4s linear
+    @media screen and (max-width: 690px)
+      flex-basis: 100%
+      margin: 2% 0
+    &:hover
+      box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3)
+    &.active
+      .works-cards__image
+        img
+          opacity: 0.6
+          transform: scale(1.1)
+  &__image
+    background: black
+    height: 400px 
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      transition: .3s
+  &__content
+    position: absolute
+    bottom: 0px
+    background: OldLace
+    width: 100%
+    text-align: center
+    padding: 20px 30px
+  &__title
+    font-size: 24px
+    font-weight: 600
+    color: #333333
+  &__sub-title
+    font-size: 18px
+    font-weight: 500
+    color: #e74c3c
+    margin-bottom: 10px
+  &__bottom
+    display: none
+    p
+      color: #666666
+      font-size: 16px
+      text-align: justify
+      line-height: 1.8em
+    button
+      float: left
+      padding: 7px 15px
+      font-size: 17px
+      background: #e74c3c
+      color: white
+      font-weight: 500
+      border: none
+      margin: 10px 0
+      cursor: pointer
+      transition: .3s ease
+      &:hover
+        transform: scale(0.9)
+        background: #e64533
+
+/* Секция с услугами */
+
+.services
+  padding: 40px 0
+  background-color: #1e272e
+  .wrapper
+    position: relative
+    .swiper-button-prev-unique, .swiper-button-next-unique
+      position: absolute
+      top: 50%
+      width: 50px
+      height: 50px
+      display: block
+      cursor: pointer
+      @media screen and (max-width: 842px)
+        display: none
+      &:focus
+        outline: none
+      img
+        width: 100%
+        height: 100%
+    .swiper-button-prev-unique
+      left: -50px
+      color: #fff
+      @media screen and (max-width: 1500px)
+        left: -30px
+      @media screen and (max-width: 992px)
+        left: -50px
+    .swiper-button-next-unique
+      right: -50px
+      color: #fff
+      @media screen and (max-width: 1500px)
+        right: -30px
+      @media screen and (max-width: 992px)
+        right: -50px
+		&__title
+      font-size: calc(35px + (48 - 35) * ((100vw - 320px) / (1200 - 320)))
+      font-weight: 700
+      text-align: center
+      color: #f2f2f2
+      margin-bottom: 20px
+		&__content
+      display: flex
+      position: relative
+      justify-content: space-between
+
+.swiper-container
+  position: relative
+
+.box.swiper-slide
+  position: relative
+  width: 280px
+  height: 400px
+  margin: 20px 0
+  box-sizing: border-box
+  overflow: hidden
+  &:hover
+    .imgBx
+      clip-path: circle(80px at center 100px)
+      transition-delay: .4s
+    .content
+      h2
+        opacity: 1
+        transform: translateY(0px)
+        transition-delay: .8s
+      p
+        opacity: 1
+        transform: translateY(0px)
+        transition-delay: 1s
+      a
+        opacity: 1
+        transform: translateY(0px)
+        transition-delay: 1.2s
+      
+  .imgBx
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #000
+    clip-path: circle(400px at center 100px)
+    transition: .5s
+    transition-delay: .5s
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .content
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 55%
+    padding: 20px
+    box-sizing: border-box
+    text-align: center
+    h2
+      margin: 0
+      padding: 0
+      opacity: 0
+      transition: .5s
+      transform: translateY(20px)
+      font-size: 20px
+      line-height: 36px
+      color: #f2f2f2
+      margin-bottom: 10px
+    a
+      text-decoration: none
+      background: #000
+      color: #fff
+      padding: 5px
+      display: inline-block
+      opacity: 0
+      transition: .5s
+      transform: translateY(20px)
+    p
+      opacity: 0
+      transition: .5s
+      transform: translateY(20px)
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      color: #f2f2f2
+      margin-bottom: 20px
+      cursor: default
+
+/* Секция блога */
+
+.blog
+  padding: 40px 0
+  background-color: snow
+		&__title
+      font-weight: 700
+      text-align: center
+      margin-bottom: 10px
+      font-size: calc(38px + (48 - 38) * ((100vw - 320px) / (1200 - 320)))
+      color: #010101
+		&__headline
+      color: #e74c3c
+      font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)))
+      font-weight: bold
+      text-align: center
+      margin-bottom: 40px
+		&__content
+
+
+.news-cards
+		&__card
+      display: flex
+      background-color: #fff
+      box-shadow: 2px .8rem 1rem rgba(0, 0, 0, .05)
+      margin-bottom: 40px
+      @media screen and (max-width: 992px)
+        flex-direction: column
+      &:hover
+        .news-cards__background-image
+          img
+            transform: scale(1.5)
+        .news-cards__publication-details
+          transform: translateX(0)
+          .news-cards__date
+            transform: translateY(0)
+            opacity: 1
+		&__image-data
+      flex-basis: 40%
+      height: unset
+      position: relative
+      z-index: 1
+      overflow: hidden
+      @media screen and (max-width: 992px)
+        min-height: 20rem
+        flex-basis: 100%
+      @media screen and (max-width: 640px)
+        min-height: 15rem
+      @media screen and (max-width: 425px)
+        min-height: 10rem
+		&__background-image
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transition: transform 5s
+		&__publication-details
+      width: 100%
+      height: 100%
+      background: linear-gradient(135deg, rgba(255,119,48,0.8) 0%,rgba(255,185,0,0.8) 100%)
+      font-size: 1.4rem
+      font-weight: bold
+      color: #f2f2f2
+      position: absolute
+      top: 0
+      left: 0
+      padding: 1rem
+      transform: translateX(-100%)
+      transition: transform .5s
+		&__date
+      transform: translateY(-3rem)
+      opacity: 0
+      transition: all .5s .6s
+      display: block
+		&__calendarIcon
+      margin-right: 1rem
+		&__post-data
+      flex-basis: 60%
+      background-color: #fff
+      padding: 2rem 3rem
+      position: relative
+      @media screen and (max-width: 992px)
+        flex-basis: 100%
+      @media screen and (max-width: 600px)
+        padding: 1.5rem 1.5rem
+      &::before
+        content: ''
+        width: 3.5rem
+        height: 100%
+        background-color: #fff
+        position: absolute
+        top: 0
+        left: -1.5rem
+        z-index: 10
+        transform: skewX(-5deg)
+        @media screen and (max-width: 992px)
+          display: none
+		&__title
+      font-size: calc(32px + (40 - 32) * ((100vw - 320px) / (1200 - 320)))
+      line-height: 1
+      @media screen and ( max-width: 425px)
+        text-align: center
+		&__subtitle
+      font-size: calc(17px + (19 - 17) * ((100vw - 320px) / (1200 - 320)))
+      font-weight: 400
+      text-transform: uppercase
+      color: #a2a2a2
+      margin: 1rem 0 1.5rem 0
+      @media screen and ( max-width: 425px)
+        text-align: center
+		&__description
+      position: relative
+      line-height: 28px
+      &::first-letter
+        margin-left: 1rem
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: .5rem
+        height: 28px
+        background: linear-gradient(135deg, rgba(255,119,48,0.8) 0%,rgba(255,185,0,0.8) 100%)
+        border-radius: 2rem
+		&__cta
+      text-decoration: none
+      text-align: right
+      font-weight: bold
+      margin-top: 1rem
+      @media screen and ( max-width: 425px)
+        text-align: center
+      a
+        background: linear-gradient(135deg, rgba(255,119,48,0.8) 0%,rgba(255,185,0,0.8) 100%)
+        -webkit-background-clip: text
+        color: transparent
+        position: relative
+        &:hover
+          &::before
+            transform: scaleX(1)
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          bottom: -.5rem
+          width: 100%
+          height: 3.5px
+          background: linear-gradient(135deg, rgba(255,119,48,0.8) 0%,rgba(255,185,0,0.8) 100%)
+          transform: scaleX(0)
+          transform-origin: left
+          transition: transform .5s
+         
+/* Секция с формой обратной связи */
+
+.feedback
+  position: relative
+  padding: 40px 0
+  padding-bottom: 80px
+  background-color: #1e272e
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 50%
+    height: 100%
+    background: #38ada9
+		&__title
+      position: relative
+      font-weight: 700
+      text-align: center
+      margin-bottom: 40px
+      font-size: calc(38px + (48 - 38) * ((100vw - 320px) / (1200 - 320)))
+      color: #f2f2f2
+      z-index: 20
+		&__form
+      position: relative
+      z-index: 30
+      display: flex
+      max-width: 1100px
+      margin: 0 auto
+      @media screen and ( max-width: 864px)
+        flex-direction: column-reverse
+		&__container
+      position: relative
+      display: flex
+      z-index: 40
+		&__contactinfo
+      position: absolute
+      top: 40px
+      width: 350px
+      background: #0f3959
+      z-index: 1
+      padding: 40px
+      box-shadow: 0 20px 20px rgba(0, 0, 0, .2)
+      @media screen and ( max-width: 992px)
+        left: -60px
+      @media screen and ( max-width: 864px)
+        position: static
+        width: 100%
+        box-shadow: 0 50px 50px rgba(0, 0, 0, .5)
+      h2
+        color: #f2f2f2
+        font-size: 24px
+        font-weight: 500
+        margin-bottom: 20px
+		&__info
+      position: relative
+      margin: 20px 0
+      li
+        position: relative
+        list-style: none
+        display: flex
+        margin: 20px 0
+        cursor: pointer
+        align-items: center
+        &:hover
+          a
+            img
+              opacity: 1
+        a
+          position: relative
+          padding: 10px 15px 10px 40px
+          background: crimson
+          text-decoration: none
+          span
+            color: #f2f2f2
+            opacity: .5
+            transition: .3s
+          img
+            position: absolute
+            left: 10px
+            top: 50%
+            transform: translateY(-50%)
+            width: 30px
+            height: 30px
+            filter: invert(1)
+            opacity: .5
+            transition: .3s
+        span
+          &:nth-child(1)
+            width: 30px
+            min-width: 30px
+            img
+              width: 100%
+              height: 100%
+              object-fit: cover
+              filter: invert(1)
+              transition: .3s
+              opacity: .5
+          &:nth-child(2)
+            color: #f2f2f2
+            margin-left: 10px
+            font-weight: 300
+            opacity: .5
+            transition: .3s
+        &:hover
+          span
+            &:nth-child(1)
+              img
+                opacity: 1
+            &:nth-child(2)
+              opacity: 1
+		&__sci
+      position: relative
+      display: flex
+      height: 30px
+      margin-top: 60px
+      @media screen and ( max-width: 864px)
+        justify-content: center
+        margin-top: 50px
+      li
+        width: 30px
+        list-style: none
+        margin-right: 15px
+        a
+          width: 100%
+          height: 100%
+          text-decoration: none
+          display: block
+          img
+            width: 100%
+            height: 100%
+            object-fit: fill
+            filter: invert(1)
+            opacity: .5
+            transition: .3s
+            &:hover
+              opacity: 1
+		&__contactForm
+      width: 100%
+      height: 100%
+      background: snow
+      padding: 70px 50px
+      margin-left: 150px
+      padding-left: 250px
+      box-shadow: 0 50px 50px rgba(0, 0, 0, .5)
+      @media screen and ( max-width: 992px)
+        margin-left: 50px
+        padding-left: 260px
+      @media screen and ( max-width: 864px)
+        margin-left: 0px
+        padding: 40px 40px
+      h2
+        color: #010101
+        font-size: 24px
+        font-weight: 500
+        margin-bottom: 30px
+        @media screen and ( max-width: 425px)
+          text-align: center
+		&__formBox
+      position: relative
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+		&__inputBox
+      position: relative
+      margin: 0 0 35px 0
+      @media screen and ( max-width: 864px)
+        &:last-of-type
+          margin-bottom: 0px
+      &:not(:last-of-type), &:nth-last-of-type(2)
+        width: 47%
+        @media screen and ( max-width: 516px)
+          width: 100%
+      &:last-of-type, &:nth-last-of-type(2)
+        width: 100%
+      input, textarea
+        resize: none
+        background: snow
+        width: 100%
+        padding: 5px 0
+        font-size: 18px
+        font-weight: 300
+        color: #333
+        border: none
+        border-bottom: 1px solid #777
+        outline: none
+        &:focus ~ span,
+        &:valid ~ span
+          transform: translateY(-20px)
+          font-size: 12px
+          font-weight: 400
+          letter-spacing: 1px
+          color: crimson
+      textarea
+        min-height: 120px 
+      span
+        position: absolute
+        left: 0        
+        padding: 5px 0
+        font-size: 18px
+        font-weight: 300
+        color: #333
+        transition: .5s
+        pointer-events: none
+      input[type="submit"]
+        position: relative
+        cursor: pointer
+        background: #0f3959
+        color: #f2f2f2
+        border: none
+        max-width: 150px
+        padding: 12px
+        transition: .3s
+        @media screen and ( max-width: 425px)
+          display: block
+          margin: 0 auto
+        &:hover
+          background: crimson
+          
+        
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
