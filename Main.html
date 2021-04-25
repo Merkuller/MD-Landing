@@ -149,45 +149,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="works-cards__card">
-                        <div class="works-cards__image">
-                            <img src="./img/main/work2.jpg" alt="">
-                        </div>
-                        <div class="works-cards__content">
-                            <div class="works-cards__title">Название</div>
-                            <div class="works-cards__sub-title">Подзаголовок</div>
-                            <div class="works-cards__bottom">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus dolore officia perspiciatis rem odio assumenda labore, sint aperiam praesentium.</p>
-                                <button>Перейти</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="works-cards__card">
-                        <div class="works-cards__image">
-                            <img src="./img/main/work3.jpg" alt="">
-                        </div>
-                        <div class="works-cards__content">
-                            <div class="works-cards__title">Название</div>
-                            <div class="works-cards__sub-title">Подзаголовок</div>
-                            <div class="works-cards__bottom">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus dolore officia perspiciatis rem odio assumenda labore, sint aperiam praesentium.</p>
-                                <button>Перейти</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="works-cards__card">
-                        <div class="works-cards__image">
-                            <img src="./img/main/work4.jpg" alt="">
-                        </div>
-                        <div class="works-cards__content">
-                            <div class="works-cards__title">Название</div>
-                            <div class="works-cards__sub-title">Подзаголовок</div>
-                            <div class="works-cards__bottom">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus dolore officia perspiciatis rem odio assumenda labore, sint aperiam praesentium.</p>
-                                <button>Перейти</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <a href="#" class="works__watchMore"><span>Смотреть больше</span></a>
             </div>
@@ -436,31 +397,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" integrity="sha512-Blu6KWaTqestULmtJUTB2mwDFTB/FDRuTHV52Uu5dTFVQZ8YWUq2LuxN/brNEjWAqlHr50oAbxrydsuxoK/mqQ==" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
-        // let arr = $('.works-cards__card');
-        
-        // $.each(arr, function() {
-        //     this.hover(function(){
-        //         if($(this).hasClass("active")) {
-        //             $('.works-cards__card .works-cards__bottom').slideUp(function() {
-        //                 $('.works-cards__card').removeClass("active");
-        //             });
-        //         } else {
-        //             $('.works-cards__card').addClass("active");
-        //             $('.works-cards__card .works-cards__bottom').stop().slideDown();
-        //         }
-        //     });
-        // });
-
-        // $('.works-cards__card').hover(function(){
-        //     if($(this).hasClass("active")) {
-        //         $('.works-cards__card .works-cards__bottom').slideUp(function() {
-        //             $('.works-cards__card').removeClass("active");
-        //         });
-        //     } else {
-        //         $('.works-cards__card').addClass("active");
-        //         $('.works-cards__card .works-cards__bottom').stop().slideDown();
-        //     }
-        // });
+        $('.works-cards__card').hover(function(){
+            if($(this).hasClass("active")) {
+                $('.works-cards__card .works-cards__bottom').slideUp(function() {
+                    $('.works-cards__card').removeClass("active");
+                });
+            } else {
+                $('.works-cards__card').addClass("active");
+                $('.works-cards__card .works-cards__bottom').stop().slideDown();
+            }
+        });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.6/swiper-bundle.min.js" integrity="sha512-n6GpoPKzdir52uRa3Z+M+BxBFNGwMMVTISZM9LMg9lMXyRVrtCcQavkP81NOI06NyVUskN9GLzZIQtPuF3GWLg==" crossorigin="anonymous"></script>
     <script>

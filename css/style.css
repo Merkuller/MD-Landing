@@ -792,12 +792,19 @@ nav .wrapper .btn.cancel-btn {
   bottom: 50%;
 }
 
+.works-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .works-cards__card {
   position: relative;
   height: 470px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 40%;
-          flex: 1 1 40%;
+  max-width: 580px;
   margin: 2%;
   display: block;
   background: Honeydew;
